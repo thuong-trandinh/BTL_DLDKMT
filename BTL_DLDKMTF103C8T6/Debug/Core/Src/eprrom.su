@@ -1,0 +1,2 @@
+../Core/Src/eprrom.c:9:6:EEPRROM_WriteBuffer	40	static
+../Core/Src/eprrom.c:12:6:EEPRROM_ReadBuffer	40	static

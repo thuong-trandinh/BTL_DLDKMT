@@ -1,0 +1,2 @@
+../Core/Src/SPI.c:10:6:send_data	1
+../Core/Src/SPI.c:19:6:MAX7219_Init	1
