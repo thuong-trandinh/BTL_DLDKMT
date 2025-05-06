@@ -1,0 +1,2 @@
+../Core/function_layer/control_motor.c:5:6:Xuat_PWM_2	1
+../Core/function_layer/control_motor.c:10:6:control_motor_status	3

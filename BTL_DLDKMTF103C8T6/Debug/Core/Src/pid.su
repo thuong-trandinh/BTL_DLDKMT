@@ -1,0 +1,5 @@
+../Core/Src/pid.c:9:6:Quay_Thuan	8	static
+../Core/Src/pid.c:14:6:Quay_Nghich	8	static
+../Core/Src/pid.c:19:6:Ngung	8	static
+../Core/Src/pid.c:24:6:Xuat_PWM	32	static
+../Core/Src/pid.c:29:7:PID_Discrete	48	static

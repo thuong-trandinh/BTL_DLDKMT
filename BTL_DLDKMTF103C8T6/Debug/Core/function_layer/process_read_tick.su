@@ -1,0 +1,2 @@
+../Core/function_layer/process_read_tick.c:7:7:calculate_current_angle	24	static
+../Core/function_layer/process_read_tick.c:14:7:calculate_current_speed	24	static

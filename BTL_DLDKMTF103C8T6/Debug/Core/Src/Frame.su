@@ -2,3 +2,5 @@
 ../Core/Src/Frame.c:25:6:packframe	32	static
 ../Core/Src/Frame.c:45:6:Decode_frame	24	static
 ../Core/Src/Frame.c:55:6:Decode_Payload	32	static
+../Core/Src/Frame.c:67:6:Decode_Position	32	static
+../Core/Src/Frame.c:79:6:FloatToBytes	24	static

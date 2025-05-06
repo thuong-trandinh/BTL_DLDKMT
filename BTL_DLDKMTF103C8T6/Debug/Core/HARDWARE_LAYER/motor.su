@@ -1,0 +1,4 @@
+../Core/HARDWARE_LAYER/motor.c:5:6:init_motor	24	static
+../Core/HARDWARE_LAYER/motor.c:20:6:motor_run_CW	16	static
+../Core/HARDWARE_LAYER/motor.c:24:6:motor_run_CCW	16	static
+../Core/HARDWARE_LAYER/motor.c:28:6:motor_stop	16	static

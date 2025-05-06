@@ -25,4 +25,6 @@ uint16_t Calculate_CRC16(uint8_t *data, uint16_t length);
 void packframe(uint8_t *outbuf, frame_t  *trans,uint8_t *payload, uint8_t command);
 void Decode_frame(uint8_t *outbuf, frame_t *trans);
 void Decode_Payload(uint8_t *outbuf, frame_t *trans,uint16_t *addr,uint8_t *bytes);
+void Decode_Position(float *outbuf, frame_t *trans);
+void FloatToBytes(float value, uint8_t *out);
 #endif /* INC_FRAME_H_ */

@@ -12,5 +12,5 @@
 
 void send_data(uint8_t value,uint8_t address);
 void MAX7219_Init();
-
+void Send_Value(uint8_t *value);
 #endif /* INC_SPI_H_ */

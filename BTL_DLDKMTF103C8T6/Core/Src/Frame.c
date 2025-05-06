@@ -34,7 +34,7 @@ void packframe(uint8_t *outbuf, frame_t  *trans,uint8_t *payload, uint8_t comman
 	for(uint8_t i = 0;i < trans->length;i++){
 		trans->payload[i] = payload[i];
 	}
-	if (trans->payload != NULL && trans->length > 0) {
+	if (trans->length > 0) {
 	    memcpy(&outbuf[4], trans->payload, trans->length);
 	}
 	trans->CRC_16 = Calculate_CRC16(&outbuf[1],trans->length + 3); // temp ktr xiu nua xoa
@@ -64,4 +64,27 @@ void Decode_Payload(uint8_t *outbuf, frame_t *trans,uint16_t *addr,uint8_t *byte
 		}
 	}
 }
+void Decode_Position(float *outbuf, frame_t *trans){
+	for(int i = 0; i < trans->length / 4; i++){
+		 // ghép 4 byte MSB→LSB vào uint32_t
+		 uint32_t u =  ((uint32_t)trans->payload[4*i    ] << 24)
+		               | ((uint32_t)trans->payload[4*i + 1] << 16)
+		               | ((uint32_t)trans->payload[4*i + 2] <<  8)
+		               | ((uint32_t)trans->payload[4*i + 3] <<  0);
+		 float f;
+		 memcpy(&f, &u, sizeof(f));    // giữ nguyên bit‑pattern
+		 outbuf[i] = f;
+	}
+}
+void FloatToBytes(float value, uint8_t *out) {
+    uint32_t asInt;
+    /* Copy bit-pattern of float into 32-bit integer */
+    memcpy(&asInt, &value, sizeof(asInt));
+    /* Extract bytes in big-endian order (MSB first) */
+    out[0] = (uint8_t)((asInt >> 24) & 0xFF);
+    out[1] = (uint8_t)((asInt >> 16) & 0xFF);
+    out[2] = (uint8_t)((asInt >> 8) & 0xFF);
+    out[3] = (uint8_t)(asInt & 0xFF);
+}
+
 

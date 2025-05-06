@@ -26,4 +26,9 @@ void MAX7219_Init()
 	send_data(0x0F, 0x00);
 
 }
+void Send_Value(uint8_t *value){
+	for(uint8_t i = 0;i < 8; i ++){
+		send_data(8 - i,*(value+i));
+	}
+}
 
